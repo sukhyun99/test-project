@@ -1,9 +1,10 @@
 package testproject.hello.controller.login;
 
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,8 +14,13 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginController {
 
 	@GetMapping
-	@ResponseBody
 	public String login() {
-		return "login";
+		log.info("Login Page");
+		
+		SecurityContext context = SecurityContextHolder.getContext();
+		log.info("isAuthenticated :{}", context.getAuthentication().isAuthenticated());
+		log.info("getName :{}", context.getAuthentication().getName());
+		
+		return "login/login";
 	}
 }

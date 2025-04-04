@@ -4,29 +4,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>대한건축사협회</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/reset.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/assets/fonts/nanum/nanumbarungothicsubset.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/assets/fonts/NotoSansKR-Hestia-master/stylesheets/NotoSansKR-Hestia.css">
-<link href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-icons.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/fonts/nanum/nanumbarungothicsubset.css">
+<link rel="stylesheet" type="text/css" href="/fonts/NotoSansKR-Hestia-master/stylesheets/NotoSansKR-Hestia.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/styleOrg.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-icons.css">
+<link rel="stylesheet" href="/css/animate.min.css">
+<link rel="stylesheet" href="/css/datatables.min.css">
 
 <%-- <script src="${pageContext.request.contextPath}/assets/js/jquery-2.1.1.js"></script> --%>
-<script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/jquery-ui-1.10.0.custom.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/datatables.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/pdfmake.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/vfs_fonts.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/bootstrap.bundle.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/owl.carousel.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/script.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/calendar_util.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/util.js"></script>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/style.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/styleOrg.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery-ui-1.10.0.custom.js"></script>
+<script src="/js/datatables.min.js"></script>
+<script src="/js/pdfmake.min.js"></script>
+<script src="/js/vfs_fonts.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/calendar_util.js"></script>
+<script src="/js/util.js"></script>
 <script>
 
 // history.pushState(null, null, document.URL);
@@ -193,8 +191,9 @@ document.onkeydown = function() {
 var reportUrl = "https://cert.kira.or.kr/RexServer30";
 //]]>
 </script>
+
 <div id="loading" style="display:none !important" class="spinner_wrap w-100 h-100 d-flex align-items-center justify-content-between bg-dark bg-opacity-50">
     <div  class="m-auto bg-light rounded-circle p-4 shadow">
       <div class="spinner"  ></div>
     </div>
-  </div>
+</div>

@@ -5,4 +5,4 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 <%@ taglib uri = "/WEB-INF/tlds/utils-tag.tld" prefix = "utilOrg" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<sec:authentication property="details" var="details"/>
+<sec:authentication property="principal" var="principal"/>

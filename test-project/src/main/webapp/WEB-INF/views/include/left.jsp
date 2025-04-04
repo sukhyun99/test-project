@@ -62,8 +62,7 @@ window.onload = function(){
 <c:set var="path" value="${requestScope['javax.servlet.forward.servlet_path']}"></c:set>
     <div class="logo-details border-bottom p-3">
       <div class="logo_name">
-        
-        <img class="img-fluid" src="${pageContext.request.contextPath}/assets/img/logo.png" alt="대한건축사협회" />
+        <img class="img-fluid" src="/img/logo.png" alt="대한건축사협회" />
         <p class="text-center m-0 pt-2">
 		    <c:if test = "${fn:startsWith(path, '/member')}">    
 		        정회원
@@ -94,17 +93,11 @@ window.onload = function(){
     <ul class="nav-list m-0 flex-column pb-3">
       <li class="profile p-3 border-bottom my-0" id="profile">
         <div class="profile-details">
-          <img src="${pageContext.request.contextPath}/assets/img/user_icon.png" alt="profileImg">
+          <img src="/img/user_icon.png" alt="profileImg">
           <div class="name_job mini_hide">
-            <div class="name">${details.getSUserNm() }&nbsp;${details.getSPosName() }</div>
-            <div class="job">${details.getSDeptName() }</div>
+            <div class="name">${principal.username} 팀장님</div>
+            <div class="job">정보전산팀</div>
           </div>
-          <span class="tooltip">
-            <div class="name_job">
-              <div class="name">${details.getSUserNm() }&nbsp;${details.getSPosName() }</div>
-              <div class="job">${details.getSDeptName() }</div>
-            </div>
-          </span>
         </div>
       </li>
       

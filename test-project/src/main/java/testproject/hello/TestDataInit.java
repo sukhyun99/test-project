@@ -1,5 +1,7 @@
 package testproject.hello;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -20,20 +22,15 @@ public class TestDataInit {
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 	}
 
+	@PostConstruct
 	public void dataInit() {
 		for(int i=0; i<5; i++) {
-			Member member = new Member();
-			member.setUsername("user" + i);
-			member.setPassword(bCryptPasswordEncoder.encode("user" + i));
-			member.setRole("ROLE_USER");
+			Member member = new Member("user" + i, bCryptPasswordEncoder.encode("user" + i), "ROLE_USER");
 			memberRepository.save(member);
 		}
 		
 		for(int i=0; i<5; i++) {
-			Member member = new Member();
-			member.setUsername("admin" + i);
-			member.setPassword(bCryptPasswordEncoder.encode("admin" + i));
-			member.setRole("ROLE_ADMIN");
+			Member member = new Member("admin" + i, bCryptPasswordEncoder.encode("admin" + i), "ROLE_ADMIN");
 			memberRepository.save(member);
 		}
 	}
