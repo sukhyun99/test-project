@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="testproject.hello.mapper.MenuMapper">
+
+	<select id="findAll" resultType="hashmap">
+		SELECT MENU_ID
+			 , MENU_NAME
+			 , MENU_CODE
+			 , MENU_AUTH
+			 , MENU_UPPER_CODE
+			 , MENU_PATH
+		FROM TB_COM_MENU
+	</select>
+
+	<select id="findByUpperCode" resultType="hashmap">
+		SELECT MENU_ID
+			 , MENU_NAME
+			 , MENU_CODE
+			 , MENU_AUTH
+			 , MENU_UPPER_CODE
+			 , MENU_PATH
+		FROM TB_COM_MENU
+		WHERE 1=1
+		AND MENU_UPPER_CODE = #{menuUpperCode}
+	</select>
+
+	<insert id="save" parameterType="testproject.hello.domain.Menu">
+		INSERT INTO TB_COM_MENU (MENU_ID, MENU_NAME, MENU_CODE, MENU_AUTH, MENU_UPPER_CODE, MENU_PATH, CREATE_DATETIME, CREATE_USER)
+					VALUES (#{menuId}, #{menuName}, #{menuCode}, #{menuAuth}, #{menuUpperCode}, #{menuPath}, #{createDatetime}, #{createUser})
+	</insert>
+
+</mapper>

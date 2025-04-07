@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="testproject.hello.mapper.MemberMapper">
+
+	<select id="findAll" resultType="hashmap">
+		SELECT USERNAME
+			 , ROLE
+		FROM MEMBER
+	</select>
+	
+	<select id="findById" resultType="testproject.hello.domain.Member">
+		SELECT USERNAME
+			 , ROLE
+		FROM MEMBER
+		WHERE 1=1
+		AND ID = #{id}
+	</select>
+	
+	<select id="findByName" resultType="testproject.hello.domain.Member">
+		SELECT USERNAME
+			 , PASSWORD
+			 , ROLE
+		FROM MEMBER
+		WHERE 1=1
+		AND USERNAME = #{username}
+	</select>
+	
+	<insert id="save" parameterType="testproject.hello.domain.Member">
+		INSERT INTO MEMBER (ID, USERNAME, PASSWORD, ROLE)
+					VALUES (#{id}, #{username}, #{password}, #{role})
+	</insert>
+</mapper>

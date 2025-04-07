@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
+import testproject.hello.service.login.LoginService;
 
 @Slf4j
 @Controller
 @RequestMapping("/login")
 public class LoginController {
-
+	
 	@GetMapping
 	public String login() {
 		log.info("Login Page");
@@ -23,4 +24,5 @@ public class LoginController {
 		
 		return "login/login";
 	}
+	
 }
